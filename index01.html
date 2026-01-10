@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JS練習</title>
+</head>
+<body>
+
+  <button id="btn">押す</button>
+  <p id="text">ここが変わる</p>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const text = document.getElementById('text');
+
+    btn.addEventListener('click', () => {
+      text.textContent = '変わた';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- 
+ 
+-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JS練習</title>
+
+  <style>
+  button {
+    background-color: aquamarine;
+  }
+
+  </style>
+  
+</head>
+<body>
+
+  <button id="btn">押す</button>
+  <p id="text">待機中</p>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const text = document.getElementById('text');
+
+    const wait = ms =>
+      new Promise(resolve => setTime(resolve,ms));
+
+    const longTest = () =>
+      new Promise(resolve => {
+        setTimeout(() => {
+          resolve('処理完了！');
+        },2000);
+      });
+
+    const timeout = ms =>
+      new setTime((_,reject) => {
+        reject('タイムアウトしました');
+      },ms);
+
+
+    btn.addEventListener('click',async () => {
+      text.textContent = '処理中…';
+      text.style.color = 'black';
+
+      try {
+        
+      }
+    });
+
+  </script>
+
+</body>
+</html> 

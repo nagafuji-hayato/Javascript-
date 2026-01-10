@@ -1,0 +1,35 @@
+<!-- 
+CSSを追加
+javascriptでボタン押下後、色を変える
+ -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JS練習</title>
+
+  <style>
+    p {
+      color:red;
+    }
+  </style>
+
+</head>
+<body>
+
+  <button id="btn">押す</button>
+  <p id="text">ここが変わる</p>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const text = document.getElementById('text');
+
+    btn.addEventListener('click', () => {
+      text.textContent = '変わった';
+      text.style.color = 'blue'
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!-- 
+ 時間差で色のみ時間差で変わる
+ setTime…引数に(処理内容,実行タイミング)の構成で処理を
+  一定時間後に実行するように命令することができるメソッド
+  -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JS練習</title>
+
+  <style>
+    p {
+      color:red;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <button id="btn">押す</button>
+  <p id="text">ここが変わる</p>
+
+  <script>
+    
+    const btn = document.getElementById('btn');
+    const text = document.getElementById('text');
+    
+    const wait = ms =>
+      new Promise(resolve => setTimeout(resolve,ms));
+
+    btn.addEventListener('click', async () => {
+      text.textContent = 'ぼくは';
+      text.style.color = 'blue'
+
+      await wait(10000);
+
+      text.textContent = 'はやとです';
+      text.style.color = 'red'
+    });
+
+    
+  </script>
+
+</body>
+</html>

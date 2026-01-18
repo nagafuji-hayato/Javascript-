@@ -1,0 +1,74 @@
+<!-- 
+ Promise…非同期処理で行った結果を返す
+ →resolveとreject、ふたつの関数を引数に取る
+ Promise race…複数の処理の中で一番早く終了した処理の値を出力
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JS練習</title>
+
+  <style>
+  button {
+    background-color: aquamarine;
+  }
+
+  </style>
+  
+</head>
+<body>
+
+  <button id="btn">押す</button>
+  <p id="text">待機中</p>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const text = document.getElementById('text');
+
+    const wait = ms =>
+      new Promise(resolve => setTimeout(resolve,ms));
+
+    // 時間のかかる処理
+    const longTest = () =>
+      new Promise(resolve => {
+        setTimeout(() => {
+          resolve('処理完了！');
+        },2000);
+      });
+
+    // タイムアウト用Promise
+    const timeout = ms =>
+      new Promise((_, reject) => {
+        setTimeout(() => {
+          reject('タイムアウトしました');
+        },ms);
+      });
+      
+
+    btn.addEventListener('click',async () => {
+      text.textContent = '処理中…';
+      text.style.color = 'black';
+
+      try {
+        const result = await Promise.race([
+          longTest(),
+          timeout(1500)
+        ]);
+
+        text.textContent = result;
+        text.style.color = 'green';
+        
+      } catch (error) {
+        text.textContent = error;
+        text.style.color = 'red';
+      }
+    });
+
+  </script>
+
+</body>
+</html> 

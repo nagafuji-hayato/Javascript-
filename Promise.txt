@@ -1,0 +1,51 @@
+
+
+
+◆Promise　使い方
+
+return new Promise((resolve, reject) => {
+    resolve(値);
+});
+
+処理()
+  .then(値 => { ... })
+  .catch(エラー => { ... });
+
+
+
+例：基本的な使い方
+function getDate() {
+    return new Promise(function(resolve, reject) {
+        resolve(new Date());
+    });
+}
+
+
+呼ぶ側
+getDate().then(function(date) {
+    console.log(date.getFullYear());
+});
+
+
+
+例：エラーがある場合(reject)
+function getDate() {
+    return new Promise(function(resolve, reject) {
+        if (true) {
+            resolve(new Date());
+        } else {
+            reject("失敗した");
+        }
+    });
+}
+
+
+呼ぶ側
+getDate()
+    .then(function(date) {
+        console.log(date.getFullYear());
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+

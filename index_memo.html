@@ -1,0 +1,35 @@
+/*
+*/
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JS練習</title>
+</head>
+<body>
+
+  <button id="btn">押す</button>
+  <p id="text">ここが変わる</p>
+
+/*
+btn…HTMLのボタン発火時に渡す、戻り値を入れるための変数
+text…textを入れるための変数
+document.getElementById…HTML要素の取得を簡単に行うことができる
+例：document.getElementById('text')
+→   <p id="text">ここが変わる</p>   を取得(IDを取得)
+addEventListenerの書き方例：
+対象の要素.addEventListener(種類, 関数, false);
+*/
+  <script>
+    const btn = document.getElementById('btn');
+    const text = document.getElementById('text');
+
+    btn.addEventListener('click', () => {
+      text.textContent = '変わた';
+    });
+  </script>
+
+</body>
+</html>

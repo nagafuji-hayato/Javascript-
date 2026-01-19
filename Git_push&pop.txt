@@ -1,0 +1,50 @@
+GIT　push・pop方法
+
+◆最新情報取得
+git pull
+
+
+◆ノーパソ
+
+・push
+cd $ cd C:/Users/kanah/OneDrive/デスクトップ/project/Javascript練習
+⇓
+
+git add .
+⇓
+
+git commit -m "変更内容"
+git push
+
+・pop
+
+cd $ cd C:/Users/kanah/OneDrive/デスクトップ/project/Javascript練習
+⇓
+
+$ git clone https://github.com/nagafuji-hayato/Javascript-.git
+
+
+
+
+デスクトップの場合
+・push
+cd C:/Users/kanah/Desktop/project/Javascript
+⇓
+git add .
+⇓
+
+git commit -m "20260118"
+git push
+
+
+・pop
+
+
+
+
+◆Gitの紐づけ方
+
+git remote add origin https://github.com/nagafuji-hayato/Javascript-.git
+
+git branch -M main
+

@@ -1,0 +1,96 @@
+<!-- 
+ join・・・配達すべての要素を連結して新しい文字列を作る
+ テキストボックス内に入力された数字を計算するアプリを作りたい
+ 
+
+ ◆電卓
+テキスト内に入力された数字を計算する
+
+
+ ◆必要な画面要素
+①　数字を入力するテキストボックス1つ
+②　計算記号ボタン4つ(＋、ー、×、÷)
+③　0～9の数字ボタン10個
+④　＝ボタン
+⑤　①のテキストボックス内に入力した数字と結果表示
+
+
+◆必要な変数・配列・ロジック等
+①　テキストボックスに入力された数字を格納する変数又それを格納する配列
+②　①で取得した値を受け取り、=ボタンが押下されたら計算開始(条件：テキスト内に2つ以上の数字が入力されたら計算可能な状態)
+→条件に当てはまっているなら③の処理へ
+③　計算記号押下後、計算式画面をリセットされた数字と計算記号を保持　　
+④　＝ボタン押下後、計算結果を表示
+⑤　
+
+
+◆仕様
+・数字以外なら計算できない
+→特殊文字が入っていた場合、計算できない旨のメッセージ表示
+→小数点付きの数字なら小数点第2位までのものを計算する
+
+◆スケジュール
+～2/7　　フロントエンド完成
+～2/21　　バックエンド完成
+
+◆ショートカット
+Shift　Alt　F
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="./style.css">
+  <title>電卓</title>
+</head>  
+
+<body>
+
+  <form id="sample">
+    <p>はやとの電卓<br>
+      <input type="tel" id="sample2" >
+    </p>
+
+    <div id="main">
+      <div id="main-btn">
+        <button id="zero"> 0 </button>
+        <button id="one"> 1 </button>
+        <button id="two"> 2 </button>
+        <button id="three"> 3 </button>
+        <button id="four"> 4 </button>
+        <button id="five"> 5 </button>
+        <button id="six"> 6 </button>
+        <button id="seven"> 7 </button>
+        <button id="eight"> 8 </button>
+        <button id="nine"> 9 </button>
+        <button id="point"> . </button>
+      </div>
+
+      <div id="submit-btn">
+        <button id="delete"> ←× </button>
+        <button id="fulldelete"> AC </button>
+        <button id="plus"> + </button>
+        <button id="minyus"> - </button>
+        <button id="kake"> × </button>
+        <button id="waru"> ÷ </button>
+        <button id="equals"> = </button>
+      </div>
+    </div>
+
+  </form>
+  <script>
+    const data = [];
+    const result = date.join('.');
+    const btn = document.getElementById('btn');
+    const text = document.getElementById('text');
+
+    btn.addEventListener('click', () => {
+      text.textContent = '変わった';
+    });
+  </script>
+
+</body>
+
+</html>

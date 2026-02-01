@@ -25,7 +25,7 @@ cd C:/Users/kanah/Desktop/project/Javascript
 git add .
 ⇓
 
-git commit -m "20260118"
+git commit -m "20260130"
 git push
 
 
@@ -48,4 +48,14 @@ esc
 
 git push
 
+
+*エラー時
+
+・pull
+訳：すでにローカル上のデータが最新
+kanah@DESKTOP-HCFBTI8 MINGW64 ~/Desktop/project/Javascript (main)
+$ git pull origin main
+From https://github.com/nagafuji-hayato/Javascript-
+ * branch            main       -> FETCH_HEAD
+Already up to date.
 

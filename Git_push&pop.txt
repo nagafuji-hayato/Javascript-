@@ -25,7 +25,7 @@ cd C:/Users/kanah/Desktop/project/Javascript
 git add .
 ⇓
 
-git commit -m "20260130"
+git commit -m "20260201"
 git push
 
 

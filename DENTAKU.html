@@ -45,7 +45,7 @@ Shift　Alt　F
 <head>
   <meta charset="UTF-8">
   <title>電卓</title>
-  <link href="./style.css">
+  <link rel="stylesheet" href="./style.css">
   <script src="./"></script>
   
 </head>  
@@ -58,7 +58,6 @@ Shift　Alt　F
   </header>
   <form id="sample">
       <input type="tel" id="sample2" >
-    </p>
 
     <div id="main">
       <div id="main-btn">
@@ -87,17 +86,7 @@ Shift　Alt　F
     </div>
 
   </form>
-  <script>
-    const data = [];
-    const result = date.join('.');
-    const btn = document.getElementById('btn');
-    const text = document.getElementById('text');
-
-    btn.addEventListener('click', () => {
-      text.textContent = '変わった';
-    });
-  </script>
-
+  
 </body>
 
 </html>

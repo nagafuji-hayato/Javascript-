@@ -10,13 +10,13 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-color: whitesmoke;
 }
+
 #header-inner {
   max-width: 1200px;
   height: 110px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   padding-left: 40px;
   padding-right: 40px;
   background-color: bisque;
@@ -27,6 +27,7 @@ img {
   max-height: 100%;
   object-fit: contain;
 }
+
 #sample {
   max-width: 1200px;
   height: 250px;
@@ -45,12 +46,10 @@ img {
 
 #main-btn {
   height: 100px;
-  color: aliceblue;
-  background-color: gray;
+  color: gray;
 }
 
 #submit-btn {
   height: 100px;
-  color: aliceblue;
-  background-color: orange;
+  color: orange;
 }

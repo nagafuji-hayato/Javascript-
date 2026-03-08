@@ -29,9 +29,6 @@ git commit -m "20260201"
 git push
 
 
-・pop
-
-
 
 
 ◆Gitの紐づけ方
